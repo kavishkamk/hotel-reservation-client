@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
-import Login from './coreUI/components/Login';
+import Login from './coreUI/pages/Login';
 
 function App() {
   // this is the router to set ther routing of app

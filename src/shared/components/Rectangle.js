@@ -13,7 +13,7 @@ import React from "react";
 const Rectangle = (props) => {
     return (
         <div 
-            className={`${props.width || "w-full"} ${props.height} ${props.color}`}
+            className={`${props.width || "w-full"} ${props.height} ${props.color} ${props.className}`}
             style={{backgroundImage: `url(/assets/images/${props.bgImage})`}}
         >
             {props.children}
