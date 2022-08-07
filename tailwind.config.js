@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'main': ['Inter', 'sans-serif'],
+        'fbtn': ['IM Fell Double Pica', 'serif'],
       },
       colors: {
 				'cornflower-blue': '#696CFF',
@@ -16,6 +17,9 @@ module.exports = {
         'cosmos': '#ffd1d1',
         'pgray': '#ccc',
         'dusty-gray': '#999999',
+        'eternity': '#0D0B06',
+        'dove-gray': '#6A6A6A',
+        'java': '#23CAC0',
       },
       spacing: {
         'main': 'calc(100% - 8rem)',

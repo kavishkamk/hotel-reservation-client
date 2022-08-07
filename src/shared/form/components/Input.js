@@ -51,6 +51,26 @@ const Input = (props) => {
     useEffect(() => {
         onInput(id, value, isValid);
     }, [onInput, id, value, isValid]);
+
+    const inputItem = (<input 
+        id={props.id}
+        type={props.type}
+        name={props.id}
+        onChange={changeHandler}
+        onBlur={onClickHandler}
+        value={inputState.value}
+        placeholder={props.placeholder}
+        className={`${props.width || "w-full"} drop-shadow-title {!props.noLabel && rounded-xl} px-2 ${props.paddingY || "py-1"} text-sxm ${!inputState.isValid && inputState.isTouched ? "border-2 border-red-600 bg-cosmos" : (props.bgField ? props.bgField : "bg-white opacity-75")} ${props.className}`}
+    />);
+
+    if (props.noLabel) {
+        return (
+            <div className={`${props.marginButtom || "mb-4"} text-left`}>
+                {inputItem}
+            {!inputState.isValid && inputState.isTouched && <p className="text-xxs text-red-500">{props.errorText}</p>}
+            </div>
+        );
+    }
     
     return (
         <div className={`${props.marginButtom || "mb-4"} text-left`}>
@@ -60,15 +80,7 @@ const Input = (props) => {
             >
                 {props.title}
             </label> <br />
-            <input 
-                id={props.id}
-                type={props.type}
-                name={props.id}
-                onChange={changeHandler}
-                onBlur={onClickHandler}
-                value={inputState.value}
-                className={`${props.width || "w-full"} drop-shadow-title rounded-xl px-2 ${props.paddingY || "py-1"} text-sxm ${!inputState.isValid && inputState.isTouched ? "border-2 border-red-600 bg-cosmos" : "bg-white opacity-75"}`}
-            />
+            {inputItem}
             {!inputState.isValid && inputState.isTouched && <p className="text-xxs text-red-500">{props.errorText}</p>}
         </div>
     );
