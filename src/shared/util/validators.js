@@ -6,6 +6,8 @@ const VALIDATOR_TYPE_MAX = 'MAX';
 const VALIDATOR_TYPE_EMAIL = 'EMAIL';
 const VALIDATOR_TYPE_FILE = 'FILE';
 const VALIDATOR_TYPE_EQUAL = "EQUAL";
+const VALIDATOR_TYPE_CONTACTNO = "TEL";
+const VALIDATOR_TYPE_ZIP = "ZIP";
 
 export const VALIDATOR_REQUIRE = () => ({ type: VALIDATOR_TYPE_REQUIRE });
 export const VALIDATOR_FILE = () => ({ type: VALIDATOR_TYPE_FILE });
@@ -21,6 +23,8 @@ export const VALIDATOR_MIN = val => ({ type: VALIDATOR_TYPE_MIN, val: val });
 export const VALIDATOR_MAX = val => ({ type: VALIDATOR_TYPE_MAX, val: val });
 export const VALIDATOR_EMAIL = () => ({ type: VALIDATOR_TYPE_EMAIL });
 export const VALIDATOR_EQUAL = val => ({ type: VALIDATOR_TYPE_EQUAL, val: val});
+export const VALIDATOR_CONTACTNO = () => ({type: VALIDATOR_TYPE_CONTACTNO});
+export const VALIDATOR_ZIP = () => ({type: VALIDATOR_TYPE_ZIP});
 
 export const validate = (value, validators) => {
   let isValid = true;
@@ -45,6 +49,12 @@ export const validate = (value, validators) => {
     }
     if (validator.type === VALIDATOR_TYPE_EQUAL) {
       isValid = isValid && validator.val === value.trim();
+    }
+    if (validator.type === VALIDATOR_TYPE_CONTACTNO) {
+      isValid = isValid && /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(value);
+    }
+    if (validator.type === VALIDATOR_TYPE_ZIP) {
+      isValid = isValid && /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(value);
     }
   }
   return isValid;

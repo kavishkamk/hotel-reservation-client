@@ -9,7 +9,7 @@ import React from "react";
 
 const FormWrapper = props => {
     return (
-        <div className={`border border-solid border-black rounded-lg px-8 py-10 w-full ${props.className}`}>
+        <div className={`border border-solid border-black rounded-lg w-full ${props.className}`}>
             {props.children}
         </div>
     );

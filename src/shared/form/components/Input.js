@@ -53,10 +53,10 @@ const Input = (props) => {
     }, [onInput, id, value, isValid]);
     
     return (
-        <div className="mb-4 text-left">
+        <div className={`${props.marginButtom || "mb-4"} text-left`}>
             <label 
                 htmlFor={props.id}
-                className={`font-main text-xs`}
+                className={`font-main ${props.textSize || "text-xs"}`}
             >
                 {props.title}
             </label> <br />
@@ -67,9 +67,9 @@ const Input = (props) => {
                 onChange={changeHandler}
                 onBlur={onClickHandler}
                 value={inputState.value}
-                className={`${props.width || "w-full"} bg-white opacity-75 drop-shadow-title rounded-xl px-2 py-1 text-sm ${!inputState.isValid && inputState.isTouched && "border-2 border-red-600 bg-cosmos"}`}
+                className={`${props.width || "w-full"} drop-shadow-title rounded-xl px-2 ${props.paddingY || "py-1"} text-sxm ${!inputState.isValid && inputState.isTouched ? "border-2 border-red-600 bg-cosmos" : "bg-white opacity-75"}`}
             />
-            {!inputState.isValid && inputState.isTouched && <p className="text-sxm text-red-500">{props.errorText}</p>}
+            {!inputState.isValid && inputState.isTouched && <p className="text-xxs text-red-500">{props.errorText}</p>}
         </div>
     );
 };

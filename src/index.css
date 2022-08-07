@@ -19,10 +19,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-@media screen and (min-width: 860px) {
-  body {
-    height: 100vh;
-    overflow: hidden;
-  }
-}

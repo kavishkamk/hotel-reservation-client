@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 import Login from './coreUI/pages/Login';
+import Registration from './coreUI/pages/Registration';
 
 function App() {
   // this is the router to set ther routing of app
@@ -13,6 +14,9 @@ function App() {
         </Route>
         <Route path="/login" exact>
           <Login />
+        </Route>
+        <Route path="/registration" exact>
+          <Registration />
         </Route>
         <Redirect to="/" />
       </Switch>

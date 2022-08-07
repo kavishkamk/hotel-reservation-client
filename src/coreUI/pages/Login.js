@@ -29,11 +29,11 @@ const Login = () => {
     }, false);
 
     return (
-        <div className="relative font-main mbp:h-screen">
+        <div className="relative font-main mbp:h-screen mbp:overflow-hidden">
             <Rectangle height="h-2" color="bg-black"/>
             <Rectangle bgImage="bg-image2.svg" height="h-screen mbp:h-main" className="pb-8 mbp:pb-3 flex flex-col">
                 <ButtonWithIcon 
-                    to="" 
+                    to="/registration"     
                     color="bg-transparent" 
                     textColor="text-black"
                     className="flex flex-row items-center absolute top-3 right-2 text-sm"
@@ -53,12 +53,11 @@ const Login = () => {
                         </div>
                     </Rectangle>
                     <Rectangle className="flex justify-center items-center py-10 px-3 sbp:px-32" height="h-full">
-                        <FormWrapper className="sbp:mr-8 text-center">
+                        <FormWrapper className="sbp:mr-8 text-center px-8 py-10">
                             <form action="">
                                 <Input 
                                     id="email"
                                     type="email"
-                                    onClick={() => {}}
                                     title="Email"
                                     errorText="Pleace Enter Valid Email"
                                     validators={[VALIDATOR_EMAIL()]}
@@ -67,7 +66,6 @@ const Login = () => {
                                 <Input 
                                     id="password"
                                     type="password"
-                                    onClick={() => {}}
                                     title="Password"
                                     errorText="Pleace Enter Valid Password"
                                     validators={[VALIDATOR_MINLENGTH(6)]}
