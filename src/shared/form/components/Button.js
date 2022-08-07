@@ -4,6 +4,7 @@
         bgColor => background colro (default bg-turbo)
         width => width (default w-44)
         className => to add class
+        disabled => disable button
 
 */
 
@@ -15,7 +16,8 @@ const Button = props => {
         <div>
             <button 
                 type={props.type}
-                className={`${props.bgColor || "bg-turbo"} drop-shadow-title ${props.width || "w-44"} py-1 rounded-lg ${props.className}`}
+                className={`drop-shadow-title ${props.width || "w-44"} py-1 rounded-lg ${props.className} ${props.isDisabled ? ("bg-pgray text-dusty-gray border-pgray cursor-not-allowed") : (props.bgColor || "bg-turbo")}`}
+                disabled={props.isDisabled}
             >
                 {props.label}
             </button>

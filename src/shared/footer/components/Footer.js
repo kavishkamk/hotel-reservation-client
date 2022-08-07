@@ -43,14 +43,14 @@ const Footer = props => {
                 <IconBar flexDirection="flex-col" className="content-around gap-1">
                     <ButtonWithIcon 
                         to="" 
-                        className="flex flex-row items-center" 
+                        className="flex flex-row items-center mb-3 sbp:mb-0" 
                         color="bg-silver-chalice"
                     >
                         <PlayStore className="mr-2"/>Google Play
                     </ButtonWithIcon>
                     <ButtonWithIcon 
                         to="" 
-                        className="flex flex-row items-center" 
+                        className="flex flex-row items-center mb-3 sbp:mb-0" 
                         color="bg-silver-chalice"
                     >
                         <AppStoreIcon className="mr-2" />App Store

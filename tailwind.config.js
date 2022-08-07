@@ -13,6 +13,9 @@ module.exports = {
         'silver-chalice': '#B1B1B1',
         'tahiti-gold': '#DE8705',
         'turbo': '#FFE600',
+        'cosmos': '#ffd1d1',
+        'pgray': '#ccc',
+        'dusty-gray': '#999999',
       },
       spacing: {
         'main': 'calc(100% - 8rem)',

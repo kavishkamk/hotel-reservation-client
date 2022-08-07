@@ -12,8 +12,22 @@ import FormWrapper from "../../shared/form/components/FormWrapper";
 import Input from "../../shared/form/components/Input";
 import AuthTitle from "../components/AuthTitle";
 import { UserIcon } from "../../shared/svg/svgIconValues";
+import { VALIDATOR_MINLENGTH, VALIDATOR_EMAIL } from "../../shared/util/validators";
+import {useForm} from "../../shared/hooks/form-hook";
 
 const Login = () => {
+
+    const [inputState, inputHandler] = useForm({
+        email: {
+            value: "",
+            isValid: false
+        },
+        password: {
+            value: "",
+            isValid: false
+        }
+    }, false);
+
     return (
         <div className="relative font-main mbp:h-screen">
             <Rectangle height="h-2" color="bg-black"/>
@@ -46,17 +60,24 @@ const Login = () => {
                                     type="email"
                                     onClick={() => {}}
                                     title="Email"
+                                    errorText="Pleace Enter Valid Email"
+                                    validators={[VALIDATOR_EMAIL()]}
+                                    onInput={inputHandler}
                                 />
                                 <Input 
                                     id="password"
                                     type="password"
                                     onClick={() => {}}
                                     title="Password"
+                                    errorText="Pleace Enter Valid Password"
+                                    validators={[VALIDATOR_MINLENGTH(6)]}
+                                    onInput={inputHandler}
                                 />
                                 <Button 
                                     type="submit"
                                     label="submit"
                                     className="mt-3"
+                                    isDisabled={!inputState.isValid}
                                 />
                             </form>
                         </FormWrapper>
