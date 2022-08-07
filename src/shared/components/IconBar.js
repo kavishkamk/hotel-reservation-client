@@ -8,9 +8,9 @@
 
 import React from "react";
 
-const IconBar = (props, innerRef ) => {
+const IconBar = (props) => {
     return (
-        <div className={`flex ${props.flexDirection} ${props.className} ${props.width || "w-40"}`} href={innerRef}>
+        <div className={`flex ${props.flexDirection} ${props.className} ${props.width || "w-40"}`}>
             {props.children}
         </div>
     );

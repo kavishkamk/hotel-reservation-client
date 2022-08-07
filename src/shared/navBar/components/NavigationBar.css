@@ -1,0 +1,18 @@
+.nav-bar-enter {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+.nav-bar-enter-active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all linear 300ms;
+}
+.nav-bare-exit {
+    transform: translateY(0%);
+    opacity: 1;
+}
+.nav-bar-exit-active {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all linear 300ms;
+}
