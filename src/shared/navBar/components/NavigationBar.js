@@ -16,7 +16,7 @@ const NavigationBar = () => {
     const changeNavStatus = () => setIsClicked(!isClicked);
 
     return (
-        <div className="relative nav2:h-16 bg-black pb-1 flex flex-col nav2:flex-row nav2:pb-0 transition linear duration-200">
+        <div className="absolute nav2:h-16 bg-black pb-1 flex flex-col nav2:flex-row nav2:pb-0 transition linear duration-200 w-full">
             <Logo height="h-16"className="ml-6" />
             <NavLinks className={`hidden nav2:flex nav2:flex-row`} />
             <CSSTransition in={isClicked} timeout={300} classNames="nav-bar" nodeRef={nodeRef} mountOnEnter unmountOnExit >
