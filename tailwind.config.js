@@ -35,6 +35,8 @@ module.exports = {
       'sbp': '580px',
       'sm': '640px',
       'mbp': '860px',
+      'nav2': '1000px',
+      'nav1': '1050px',
     },
   },
   plugins: [],
