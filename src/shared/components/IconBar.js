@@ -10,7 +10,7 @@ import React from "react";
 
 const IconBar = (props) => {
     return (
-        <div className={`flex ${props.flexDirection} ${props.className}`}>
+        <div className={`flex ${props.flexDirection} ${props.className} w-40`}>
             {props.children}
         </div>
     );

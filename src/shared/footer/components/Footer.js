@@ -14,7 +14,7 @@ import ButtonWithIcon from "../../components/ButtonWithIcon";
 
 const Footer = props => {
     return (
-        <div className={`bg-black flex font-main pt-4 pb-2 justify-around ${props.className} h-32`}>
+        <div className={`bg-black flex flex-col mbp:flex-row font-main pt-4 pb-2 justify-around ${props.className} mbp:h-32 text-center mbp:text-left`}>
             <FooterItem title="Find & Book">
                 Our Destinations<br />
                 Find a Reservation<br />
@@ -34,8 +34,8 @@ const Footer = props => {
                 Residences<br />
                 Contact Us<br />
             </FooterItem>
-            <FooterItem>
-                <IconBar className="justify-around mb-3">
+            <FooterItem className="flex flex-col items-center">
+                <IconBar className="justify-around mb-3 mbp:w-40">
                     <IconBtn to=""><FacebookIcon /></IconBtn>
                     <IconBtn to=""><InstagramIcon /></IconBtn>
                     <IconBtn to=""><TwitterIcon /></IconBtn>

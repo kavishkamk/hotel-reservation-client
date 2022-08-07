@@ -28,6 +28,11 @@ module.exports = {
         'sxm': '.75rem',
       },
     },
+    screens: {
+      'sbp': '580px',
+      'sm': '640px',
+      'mbp': '860px',
+    },
   },
   plugins: [],
 }

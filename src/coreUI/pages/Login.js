@@ -15,9 +15,9 @@ import { UserIcon } from "../../shared/svg/svgIconValues";
 
 const Login = () => {
     return (
-        <div className="relative font-main h-screen">
+        <div className="relative font-main mbp:h-screen">
             <Rectangle height="h-2" color="bg-black"/>
-            <Rectangle bgImage="bg-image2.svg" height="h-main" className="pb-3">
+            <Rectangle bgImage="bg-image2.svg" height="h-screen mbp:h-main" className="pb-8 mbp:pb-3 flex flex-col">
                 <ButtonWithIcon 
                     to="" 
                     color="bg-transparent" 
@@ -31,15 +31,15 @@ const Login = () => {
                     />Join Now
                 </ButtonWithIcon>
                 <AuthTitle />
-                <Rectangle className="flex" height="h-full">
-                    <Rectangle className="flex justify-center pr-8">
-                        <div className="mt-24 font-main">
+                <Rectangle className="flex flex-col mbp:flex-row" height="h-full">
+                    <Rectangle className="flex justify-start sbp:justify-center pr-8 pl-3">
+                        <div className="mt-8 sbp:mt-24 font-main">
                             <h2 className="text-2xl leading-10">Welcome Back...</h2>
                             <p className="text-xs font-thin leading-5">It's a pleasure to had you as a guest</p>
                         </div>
                     </Rectangle>
-                    <Rectangle className="flex justify-center items-center py-10 px-32" height="h-full">
-                        <FormWrapper className="mr-8 text-center">
+                    <Rectangle className="flex justify-center items-center py-10 px-3 sbp:px-32" height="h-full">
+                        <FormWrapper className="sbp:mr-8 text-center">
                             <form action="">
                                 <Input 
                                     id="email"
