@@ -5,12 +5,15 @@ import Footer from "../../shared/footer/components/Footer";
 import AuthDisplay from "../components/AuthDisplay";
 import EmailSubscription from "../components/EmailSubscription";
 import SearchBar from "../components/SearchBar";
+import CategoryContainer from "../components/CategoryContainer";
 
 const HotelDetails = () => {
     return (
         <div>
             <NavigationBar />
             <div className="bg-white pt-16 text-center">
+                <CategoryContainer />
+                <div className="font-main mb-1">Choose yout best hotel.</div>
                 <SearchBar />
                 <hr className="w-1/2 m-auto"/>
                 <AuthDisplay 

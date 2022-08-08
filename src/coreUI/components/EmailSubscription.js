@@ -40,6 +40,7 @@ const EmailSubscription = props => {
                         isDisabled={!inputState.isValid}
                         bgColor="bg-java"
                         borderRadious="rounded-0"
+                        shadow="shadow-none"
                     />
                 </form>
             </div>

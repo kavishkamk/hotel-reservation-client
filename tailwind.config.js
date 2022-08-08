@@ -21,6 +21,7 @@ module.exports = {
         'dove-gray': '#6A6A6A',
         'java': '#23CAC0',
         'saffron': '#F4CA32',
+        'alto': '#D9D9D9',
       },
       spacing: {
         'main': 'calc(100% - 8rem)',

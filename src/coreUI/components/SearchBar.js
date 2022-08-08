@@ -33,8 +33,8 @@ const SearchBar = () => {
     console.log(inputState);
 
     return (
-        <div className="py-3 bg-dove-gray">
-            <form className="flex justify-center content-center bg-white">
+        <div className="flex py-3 bg-dove-gray justify-center">
+            <form className="flex justify-center content-center bg-white w-fit">
                 <Input
                     id="city"
                     type="select"
@@ -82,6 +82,7 @@ const SearchBar = () => {
                     borderRadious="rounded-0"
                     className="h-full font-fbtn text-white"
                     bgColor="bg-saffron"
+                    shadow="shadow-none"
                 />
             </form>
         </div>
