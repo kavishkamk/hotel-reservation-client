@@ -52,16 +52,55 @@ const Input = (props) => {
         onInput(id, value, isValid);
     }, [onInput, id, value, isValid]);
 
-    const inputItem = (<input 
-        id={props.id}
-        type={props.type}
-        name={props.id}
-        onChange={changeHandler}
-        onBlur={onClickHandler}
-        value={inputState.value}
-        placeholder={props.placeholder}
-        className={`${props.width || "w-full"} drop-shadow-title {!props.noLabel && rounded-xl} px-2 ${props.paddingY || "py-1"} text-sxm ${!inputState.isValid && inputState.isTouched ? "border-2 border-red-600 bg-cosmos" : (props.bgField ? props.bgField : "bg-white opacity-75")} ${props.className}`}
-    />);
+    if (props.type === "select") {
+        return (
+            <div className={`flex justify-center content-center text-left ${props.sectionClass}`}>
+                <label htmlFor={props.id} className="text-xs mb-1 pl-1">{props.title}</label>
+                <select 
+                    id={props.id} 
+                    value={inputState.value} 
+                    onChange={changeHandler} 
+                    name={props.id}
+                    className={props.className}
+                >
+                    <option value="grapefruit">Grapefruit</option>
+                    <option value="lime">Lime</option>
+                    <option value="coconut">Coconut</option>
+                    <option value="mango">Mango</option>
+                </select>
+            </div>
+        );
+    };
+
+    if (props.type === "date" || props.type === "number") {
+        return (
+            <div className={`flex justify-center content-center text-left ${props.sectionClass}`}>
+                <label htmlFor={props.id} className="text-xs mb-1">{props.title}</label>
+                <input 
+                    id={props.id}
+                    type={props.type}
+                    name={props.id}
+                    onChange={changeHandler}
+                    value={inputState.value}
+                    placeholder={props.placeholder}
+                    className={props.className}
+                />
+            </div>
+        );
+    }
+
+    const inputItem = (
+        <input 
+            id={props.id}
+            type={props.type}
+            name={props.id}
+            onChange={changeHandler}
+            onBlur={onClickHandler}
+            value={inputState.value}
+            placeholder={props.placeholder}
+            className={`${props.width || "w-full"} drop-shadow-title ${!props.noLabel && "rounded-xl"} px-2 ${props.paddingY || "py-1"} text-sxm ${!inputState.isValid && inputState.isTouched ? "border-2 border-red-600 bg-cosmos" : (props.bgField ? props.bgField : "bg-white opacity-75")} ${props.className}`}
+        />
+    );
 
     if (props.noLabel) {
         return (

@@ -15,7 +15,7 @@ const ButtonWithIcon = (props) => {
         <Link
             to={props.to}
             exact={props.exact}
-            className={`${props.size || "w-full"} ${props.color || "bg-cornflower-blue"} ${props.textColor || "text-white"} px-2 py-1 rounded-xl ${props.className} z-10`}
+            className={`${props.color || "bg-cornflower-blue"} ${props.textColor || "text-white"} px-2 py-1 rounded-xl ${props.className} z-10`}
             style={{width: props.size}}
         >
             {props.children}

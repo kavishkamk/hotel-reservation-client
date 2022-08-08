@@ -31,12 +31,12 @@ const Login = () => {
     return (
         <div className="relative font-main mbp:h-screen mbp:overflow-hidden">
             <Rectangle height="h-2" color="bg-black"/>
-            <Rectangle bgImage="bg-image2.svg" height="h-screen mbp:h-main" className="pb-8 mbp:pb-3 flex flex-col">
+            <Rectangle bgImage="bg-image2.svg" height="h-screen mbp:h-main" className="relative pb-8 mbp:pb-3 flex flex-col">
                 <ButtonWithIcon 
                     to="/registration"     
                     color="bg-transparent" 
                     textColor="text-black"
-                    className="flex flex-row items-center absolute top-3 right-2 text-sm"
+                    className="absolute flex flex-row items-center top-3 right-2 text-sm"
                 >
                     <UserIcon
                         width="w-4"

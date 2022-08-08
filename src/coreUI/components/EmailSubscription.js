@@ -29,16 +29,17 @@ const EmailSubscription = props => {
                         onInput={inputHandler}
                         marginButtom="mb-0"
                         width="w-80"
-                        className="h-12"
+                        className="h-12 border-transparent"
                         paddingY="py-0"
                         bgField="bg-white"
                     />
                     <Button 
                         type="submit"
                         label="SUBSCRIBE"
-                        className="text-white h-12 ml-1"
+                        className="text-white h-12"
                         isDisabled={!inputState.isValid}
                         bgColor="bg-java"
+                        borderRadious="rounded-0"
                     />
                 </form>
             </div>

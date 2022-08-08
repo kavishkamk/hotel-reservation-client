@@ -22,7 +22,7 @@ const AuthDisplay = props => {
                     Login
                 </ButtonWithIcon>
             </div>
-            <div className="font-main font-light mx-auto w-96 my-8">{props.discreption}</div>
+            <div className="font-main font-thin mx-auto w-96 my-8">{props.discreption}</div>
         </div>
     );
 };

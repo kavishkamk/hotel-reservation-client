@@ -8,6 +8,8 @@ const VALIDATOR_TYPE_FILE = 'FILE';
 const VALIDATOR_TYPE_EQUAL = "EQUAL";
 const VALIDATOR_TYPE_CONTACTNO = "TEL";
 const VALIDATOR_TYPE_ZIP = "ZIP";
+const VALIDATOR_TYPE_DATE = "DATE";
+const VALIDATOR_TYPE_NATURALNUM = "NATURALNUM"
 
 export const VALIDATOR_REQUIRE = () => ({ type: VALIDATOR_TYPE_REQUIRE });
 export const VALIDATOR_FILE = () => ({ type: VALIDATOR_TYPE_FILE });
@@ -25,6 +27,8 @@ export const VALIDATOR_EMAIL = () => ({ type: VALIDATOR_TYPE_EMAIL });
 export const VALIDATOR_EQUAL = val => ({ type: VALIDATOR_TYPE_EQUAL, val: val});
 export const VALIDATOR_CONTACTNO = () => ({type: VALIDATOR_TYPE_CONTACTNO});
 export const VALIDATOR_ZIP = () => ({type: VALIDATOR_TYPE_ZIP});
+export const VALIDATOR_DATE = () => ({type: VALIDATOR_TYPE_DATE});
+export const VALIDATOR_NATURALNUM = () => ({type: VALIDATOR_TYPE_NATURALNUM});
 
 export const validate = (value, validators) => {
   let isValid = true;
@@ -55,6 +59,12 @@ export const validate = (value, validators) => {
     }
     if (validator.type === VALIDATOR_TYPE_ZIP) {
       isValid = isValid && /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(value);
+    }
+    if (validator.type === VALIDATOR_TYPE_DATE) {
+      isValid = isValid && /^\d{4}-\d{2}-\d{2}$/.test(value);
+    }
+    if (validator.type === VALIDATOR_TYPE_NATURALNUM) {
+      isValid = isValid && /^0*[1-9]\d*$/.test(value);
     }
   }
   return isValid;

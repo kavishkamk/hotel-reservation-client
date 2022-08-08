@@ -4,12 +4,14 @@ import NavigationBar from "../../shared/navBar/components/NavigationBar";
 import Footer from "../../shared/footer/components/Footer";
 import AuthDisplay from "../components/AuthDisplay";
 import EmailSubscription from "../components/EmailSubscription";
+import SearchBar from "../components/SearchBar";
 
 const HotelDetails = () => {
     return (
         <div>
             <NavigationBar />
             <div className="bg-white pt-16 text-center">
+                <SearchBar />
                 <hr className="w-1/2 m-auto"/>
                 <AuthDisplay 
                     title="If you have not joined us yet," 

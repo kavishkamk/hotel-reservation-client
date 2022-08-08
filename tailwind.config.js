@@ -20,6 +20,7 @@ module.exports = {
         'eternity': '#0D0B06',
         'dove-gray': '#6A6A6A',
         'java': '#23CAC0',
+        'saffron': '#F4CA32',
       },
       spacing: {
         'main': 'calc(100% - 8rem)',
