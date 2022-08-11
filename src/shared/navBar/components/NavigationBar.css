@@ -1,0 +1,14 @@
+.nav-bar-enter {
+    opacity: 0;
+}
+.nav-bar-enter-active {
+    opacity: 1;
+    transition: all linear 1000ms;
+}
+.nav-bare-exit {
+    opacity: 1;
+}
+.nav-bar-exit-active {
+    opacity: 0;
+    transition: all linear 1000ms;
+}
