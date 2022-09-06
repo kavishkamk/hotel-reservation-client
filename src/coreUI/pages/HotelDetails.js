@@ -6,6 +6,7 @@ import AuthDisplay from "../components/AuthDisplay";
 import EmailSubscription from "../components/EmailSubscription";
 import SearchBar from "../components/SearchBar";
 import CategoryContainer from "../components/CategoryContainer";
+import ItemListContainer from "../components/ItemsListContainer";
 
 const HotelDetails = () => {
     return (
@@ -15,6 +16,7 @@ const HotelDetails = () => {
                 <CategoryContainer />
                 <div className="font-main mb-1">Choose yout best hotel.</div>
                 <SearchBar />
+                {/* <ItemListContainer /> */}
                 <hr className="w-1/2 m-auto"/>
                 <AuthDisplay 
                     title="If you have not joined us yet," 

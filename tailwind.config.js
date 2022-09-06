@@ -22,6 +22,7 @@ module.exports = {
         'java': '#23CAC0',
         'saffron': '#F4CA32',
         'alto': '#D9D9D9',
+        'ewhite': '#FFFFFF',
       },
       spacing: {
         'main': 'calc(100% - 8rem)',

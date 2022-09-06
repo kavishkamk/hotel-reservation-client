@@ -65,7 +65,7 @@ const SearchBar = () => {
                     className="outline-none"
                     sectionClass="flex-col py-3"
                 />
-                <VirticalLine className="border-l border-solid my-1 mx-3 border-l-black" />
+                <VirticalLine className="border-l -solid my-1 mx-3 border-l-black" />
                 <Input
                     id="adults"
                     type="number"
